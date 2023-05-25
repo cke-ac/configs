@@ -10,4 +10,6 @@
 !AutoHotkey
 !AutoHotkey/*
 
-
+# add my powershell configurations to the current repo
+!ps
+!ps/*
