@@ -1,0 +1,7 @@
+# ignore everything
+*
+
+!.gitignore
+
+# add my auto hot key configurations
+!./AutoHotKey/*
