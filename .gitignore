@@ -2,6 +2,9 @@
 *
 
 !.gitignore
-
+!README.md
 # add my auto hot key configurations
-!AutoHotkey/**
+!*/AutoHotkey
+!*/AutoHotkey/*
+
+
