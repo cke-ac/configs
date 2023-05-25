@@ -4,4 +4,4 @@
 !.gitignore
 
 # add my auto hot key configurations
-!./AutoHotKey/*
+!AutoHotkey/**
