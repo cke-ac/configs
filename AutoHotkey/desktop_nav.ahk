@@ -129,6 +129,14 @@ OnChangeDesktop(wParam, lParam, msg, hwnd) {
     OutputDebug % "Desktop changed to " Name " from " OldDesktop " to " NewDesktop
 }
 
+; Does not work yet, will have to tweek it some more
+LaunchAndMoveToDesktop(programPath, desktopNumber) {
+    Run, %programPath% ; Launch the software
+    WinWait, ahk_exe %programPath% ; Wait for the software window to appear
+    WinWaitActive, ahk_exe %programPath% ; Wait for the software window to become active
+    MoveCurrentWindowToDesktop(desktopNumber) ; Move the software window to the desired desktop
+}
+
 #If layer1
     ; Navigate to a desktop
     1:: GoToDesktopNumber(0)
@@ -148,4 +156,7 @@ OnChangeDesktop(wParam, lParam, msg, hwnd) {
 	+5:: MoveCurrentWindowToDesktop(4)
 	+6:: MoveCurrentWindowToDesktop(5)
 	+7:: MoveCurrentWindowToDesktop(6)
+
+  !t:: LaunchAndMoveToDesktop("wt.exe", 3)
+  !r:: LaunchAndMoveToDesktop("rider", 2)
 #If
